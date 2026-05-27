@@ -1,0 +1,9 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: notes-service
+  data:
+    mongodb:
+      uri: mongodb://${DB_USER}:${DB_PASSWORD}@localhost:27017/notes_db?authSource=admin
