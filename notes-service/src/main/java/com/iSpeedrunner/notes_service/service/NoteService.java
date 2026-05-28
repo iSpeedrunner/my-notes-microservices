@@ -28,6 +28,7 @@ public class NoteService {
                 .map(existingNote -> {
                     existingNote.setTitle(currentNote.getTitle());
                     existingNote.setContent(currentNote.getContent());
+                    existingNote.setRoomId(currentNote.getRoomId());
                     return repo.save(existingNote);
                 })
                 .orElseThrow(() -> new NoteNotFoundException("Нотатку з ID '" + id + "' не знайдено"));
